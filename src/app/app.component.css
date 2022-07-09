@@ -1,0 +1,41 @@
+.wrapper {
+    min-height: 87vh;
+}
+
+.col-sidebar {
+    position: absolute;
+    z-index: 995;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.col-form {
+    position: absolute;
+    z-index: 994;
+    min-height: 100vh;
+    min-width: 102%;
+    background-color: white;
+    padding: 0% !important;
+}
+
+.footer {
+    position: relative;
+    z-index: 996;
+}
+
+
+/*  responsive breakpoints */
+
+@media (min-width: 400px) {
+    /* quitamos la barra lateral*/
+    .col-sidebar {
+        display: none;
+    }
+}
+
+@media (min-width: 420px) {
+    /* mostramos la barra lateral*/
+    .col-sidebar {
+        display: block;
+    }
+}
