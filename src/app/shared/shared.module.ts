@@ -9,12 +9,15 @@ import { Navbar2Component } from './navbar2/navbar2.component';
 
 
 
+
+
 @NgModule({
   declarations: [
     NavbarComponent,
     FooterComponent,
     SidebarComponent,
     Navbar2Component,
+    
   ],
   exports:[
     NavbarComponent,
@@ -25,7 +28,8 @@ import { Navbar2Component } from './navbar2/navbar2.component';
   imports: [
     CommonModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+   
   ]
 })
 export class SharedModule { }

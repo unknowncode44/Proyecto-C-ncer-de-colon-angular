@@ -8,8 +8,15 @@
     </div>
 
     <!-- form -->
-    <div [ngClass]="{'active': toggled}" class="col-form">
+    <div [ngClass]="{'active': toggled}" class="col-form py-0 m-0">
         <app-navbar2 (toggleEmit)="getToogled($event)"></app-navbar2>
+        <div class="container min-w-100">
+            <div class="row text-center min-w-100">
+                <div class="col-md-12 p-0 pb-4 pt-2 m-0 mt-1">
+                    <div class="card card-custom"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>

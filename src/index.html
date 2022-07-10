@@ -19,20 +19,6 @@
 
 <body class="mat-typography">
     <app-root></app-root>
-
-
-    <script>
-        // para dejar seleccionada la seccion activa
-        let list = document.querySelectorAll('sb-navigation ul li');
-
-        function activeLink() {
-            list.forEach((item) =>
-                item.classList.remove('hovered'));
-            this.classList.add('hovered')
-        }
-        list.forEach((item) =>
-            item.addEventListener('mouseover', activeLink()));
-    </script>
 </body>
 
 </html>

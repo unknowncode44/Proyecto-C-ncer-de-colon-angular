@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { IonicModule } from '@ionic/angular';
+import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
+import {MenuItem} from 'primeng/api';                  //api
+
 
 
 @NgModule({
@@ -17,9 +20,11 @@ import { IonicModule } from '@ionic/angular';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    IonicModule.forRoot()
+    IonicModule.forRoot(),
+    
+
   ],
-  providers: [],
+  providers: [AccordionModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
