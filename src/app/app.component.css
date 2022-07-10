@@ -1,26 +1,49 @@
 .wrapper {
     min-height: 87vh;
+    position: relative;
+    width: 100%;
 }
 
 .col-sidebar {
-    position: absolute;
+    position: fixed;
     z-index: 995;
-    min-height: 100vh;
-    background-color: white;
+    width: 300px;
+    height: 100%;
+    background: var(--primary);
+    border-left: 10px solid var(--primary);
+    transition: 0.5s;
+    overflow: hidden;
 }
+
+.col-sidebar.active {
+    width: 80px;
+}
+
+
+/* cuerpo */
 
 .col-form {
     position: absolute;
-    z-index: 994;
-    min-height: 100vh;
-    min-width: 102%;
-    background-color: white;
-    padding: 0% !important;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100%;
+    background-color: var(--white);
+    transition: 0.5s;
 }
 
+.col-form.active {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+
+/* footer */
+
 .footer {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     z-index: 996;
+    min-width: 100%;
 }
 
 

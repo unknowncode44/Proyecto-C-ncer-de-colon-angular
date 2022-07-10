@@ -6,4 +6,5 @@ export interface BrandName {
 export interface Sections {
     title: string,
     icon: string,
+    active: boolean,
 }

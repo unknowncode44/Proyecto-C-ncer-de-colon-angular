@@ -1,8 +1,25 @@
-.custom {
+.custom {}
+
+.ft-container {
     background-color: #683ab781;
     box-shadow: 0px -1px 7px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px -1px 7px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px -1px 7px 0px rgba(0, 0, 0, 0.75);
+    width: 50vh !important;
+    transition: 1.0s !important;
+}
+
+.row-custom {
+    min-width: 100vh;
+}
+
+.ft-container section {
+    max-width: 100%;
+}
+
+.ft-container.collapsed,
+.ft-container.collapsed section {
+    display: none;
 }
 
 .bottom-custom {

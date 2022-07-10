@@ -1,23 +1,35 @@
 <div class="sb-container m-0">
 
-    <!-- marca -->
-    <div class="sb-brand">
+    <!-- ##marca## -->
+    <div class="sb-brand pb-4">
         <div class="m-0 p-0">
-            <div class="row text-center p-0">
-                <img class="sb-image mt-2 p-0" src="{{brand.logo}}" alt="">
+            <div class="row text-start p-0">
+                <img [ngClass]="{'actived': toggled}" class="sb-image mt-2 p-0 pe-1" src="{{brand.logo}}" alt="">
             </div>
             <div class="p-0 m-0 row text-center">
-                <h1 class="p-0 m-0 mt-3 sb-title">{{brand.title}}</h1>
+                <h1 [ngClass]="{'actived': toggled}" class="p-0 m-0 mt-3 sb-title">{{brand.title}}</h1>
             </div>
         </div>
     </div>
 
-    <!-- navegacion -->
+    <!-- ##navegacion## -->
     <div class="sb-navigation">
-        <ul>
-            <li>
-                <a href="#">
-                    <span></span>
+        <ul class="p-0">
+
+            <!-- corremos un ngFor para completar la lista de secciones -->
+            <li *ngFor="let section of sections">
+                <a [ngClass]="{'hovered': section.active}" href="#" (click)="hoverActiveSection(section)">
+                    <span class="{{ section.icon }} sb-icon"></span>
+                    <span class="sb-section-name">{{ section.title }}</span>
+                </a>
+            </li>
+
+            <!-- ##logout## -->
+            <!-- Ojo, el boton de salir esta fuera del ngFor de secciones! -->
+            <li class="mt-2">
+                <a [ngClass]="{'hovered': logOut.active}" href="#" (click)="hoverActiveSection(logOut)">
+                    <span class="{{ logOut.icon }} sb-icon"></span>
+                    <span class="sb-section-name">{{ logOut.title }}</span>
                 </a>
             </li>
         </ul>

@@ -1,22 +1,18 @@
 <!-- <app-navbar></app-navbar>
  -->
 <div class="wrapper">
-    <div class="container p-0 m-0">
-        <div class="row">
 
-            <!-- sidebar -->
-            <div class="col-md-2 p-0 col-sidebar">
-                <app-sidebar></app-sidebar>
-            </div>
+    <!-- sidebar -->
+    <div [ngClass]="{'active': toggled}" class="m-0 col-sidebar">
+        <app-sidebar [toggled]="toggled"></app-sidebar>
+    </div>
 
-            <!-- form -->
-            <div class="col-md-10 m-0 text-center col-form">
-                <p>form</p>
-            </div>
-        </div>
+    <!-- form -->
+    <div [ngClass]="{'active': toggled}" class="col-form">
+        <app-navbar2 (toggleEmit)="getToogled($event)"></app-navbar2>
     </div>
 
 </div>
-<div class="footer animate__fadeInUp">
+<div class="footer">
     <app-footer></app-footer>
 </div>
